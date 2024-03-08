@@ -1,12 +1,11 @@
 export const config = {
-    runner: 'browser',
-    specs: ['./src/**/*.test.js'],
+    specs: ['../tests/**'],
     maxInstances: 10,
     injectGlobals: true,
     capabilities: [{
         // capabilities for local browser web tests
         browserName: 'chrome',
-        brorserName: 'firefox' // or "firefox", "microsoftedge", "safari"
+        browserName: 'firefox'
     }],
     logLevel: 'info',
     baseUrl: 'http://localhost:8080',
@@ -21,4 +20,4 @@ export const config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
-    },
+    }}
