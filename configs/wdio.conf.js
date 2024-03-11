@@ -4,6 +4,7 @@ export const config = {
     maxInstancesPerCapability: 10,
     injectGlobals: true,
     capabilities: [
+        // Browsers will run without being opened
         {
             browserName: 'chrome',
             'goog:chromeOptions': {
@@ -17,7 +18,6 @@ export const config = {
             },
         },
     ],
-        // capabilities for local browser web tests
     logLevel: 'error',
     baseUrl: 'http://localhost:8080',
     bail: 0,
