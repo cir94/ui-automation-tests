@@ -10,6 +10,7 @@ export const config = {
                 args: ['-headless', 'disable-gpu'],
             },
         },
+        // Firefox commented out as to not cause conflicts with one other test using Devtools.
         // {
         //     browserName: 'firefox',
         //     'moz:firefoxOptions': {
