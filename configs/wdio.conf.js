@@ -21,7 +21,7 @@ export const config = {
   logLevel: 'error',
   baseUrl: 'http://localhost:8080',
   bail: 0,
-  waitforTimeout: 10000,
+  waitforTimeout: 1000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
   services: ['devtools'],
