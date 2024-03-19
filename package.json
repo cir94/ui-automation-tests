@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio run ./configs/wdio.conf.js",
+    "test:cucumber": "wdio configs/wdio.cucumber.conf.js",
     "prettier:write": "prettier . --write"
   },
   "author": "",
