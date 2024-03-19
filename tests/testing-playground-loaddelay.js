@@ -5,8 +5,10 @@ describe('UI Testing Playground - Load Delay', function () {
     await browser.url(`${envs.uiTestingUrl}`);
     const loadDelayLink = browser.$('=Load Delay');
     await loadDelayLink.waitForClickable();
+    await expect(loadDelayLink).toBeClickable();
     await loadDelayLink.click();
     const button = await browser.$('.btn');
+    await expect(button).toBeClickable();
     await button.waitForClickable();
     await button.click();
   });

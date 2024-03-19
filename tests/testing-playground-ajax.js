@@ -8,6 +8,7 @@ describe('UI Testing Playground - Ajax Page', function () {
     await browser.url(`${envs.uiTestingUrl}`);
     // Using Page to access commonly used class names
     await Page.button.waitForClickable();
+    await expect(Page.button).toBeClickable();
     await Page.button.click();
     await Page.bgSuccess.waitForExist({ timeout: 20000 });
   });

@@ -7,8 +7,9 @@ describe('UI Testing Playground - Hidden Layers', function () {
     const greenButton = browser.$('#greenButton');
     const blueButton = browser.$('#blueButton');
     await greenButton.waitForClickable();
+    await expect(greenButton).toBeClickable;
     await greenButton.click();
-    expect(blueButton).toBeClickable();
+    await expect(blueButton).toBeClickable();
     await blueButton.click();
     await greenButton.waitForClickable({ reverse: true });
   });
