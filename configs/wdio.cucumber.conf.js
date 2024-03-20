@@ -6,9 +6,9 @@ export const config = {
   capabilities: [
     {
       browserName: 'chrome',
-      'goog:chromeOptions': {
-        args: ['-headless', 'disable-gpu'],
-      },
+      // 'goog:chromeOptions': {
+      //   args: ['-headless', 'disable-gpu'],
+      // },
     },
     // Firefox commented out as to not cause conflicts with one other test using Devtools.
     // {
@@ -21,12 +21,12 @@ export const config = {
   logLevel: 'error',
   baseUrl: 'http://localhost:8080',
   bail: 0,
-  waitforTimeout: 1000,
+  waitforTimeout: 5000,
   services: ['devtools'],
   framework: 'cucumber',
   reporters: ['spec'],
   cucumberOpts: {
     timeout: 20000,
-    require: ['./features/step_definitions/*.js'],
+    require: ['./features/step_definitions/*-steps.js'],
   },
 };

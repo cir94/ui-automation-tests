@@ -3,11 +3,12 @@ import { Given, When, Then } from '@wdio/cucumber-framework';
 import Page from '../../pages/page.js';
 
 Given('the webpage is opened', async function() {
-    envs.uiTestingUrl.pathname = '/ajax'
+    envs.uiTestingUrl.pathname = '/ajax';
     await browser.url(`${envs.uiTestingUrl}`);
 });
 
 When('the AJAX button is clicked', async function() {
+    await Page.button.waitForClickable();
     await expect(Page.button).toBeClickable();
     await Page.button.click();
 });
