@@ -1,9 +1,8 @@
-import { envs } from '../../url-module.js';
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import LoadPage from '../../pages/cucumber-pages/loaddelay-page.js';
 
-Given('the load delay link is clicked', async function() {
-    await browser.url(`${envs.uiTestingUrl}`);
+Given('the load delay link is clicked on {string}', async function(site) {
+    await browser.url(site);
     const loadDelayLink = browser.$('=Load Delay');
     await loadDelayLink.waitForClickable();
     await expect(loadDelayLink).toBeClickable();
