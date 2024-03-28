@@ -13,7 +13,6 @@ describe('UI Testing Playground - Progress Bar', function() {
         await expect(progressBar).toBeDisplayed();
         await startButton.click();
         await progressBar.waitUntil(async function() {
-            console.log(parseFloat(await this.getText()));
             return (parseFloat(await this.getText())) >= 75;
         }, {
             timeout: 30000,
