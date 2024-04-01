@@ -13,11 +13,11 @@ export const config = {
     // },
     // Firefox commented out as to not cause conflicts with one other test using Devtools.
     {
-        browserName: 'firefox',
-        acceptInsecureCerts: true,
-        'moz:firefoxOptions': {
-            args: ['-headless'],
-        },
+      browserName: 'firefox',
+      acceptInsecureCerts: true,
+      'moz:firefoxOptions': {
+        args: ['-headless'],
+      },
     },
   ],
   logLevel: 'error',
