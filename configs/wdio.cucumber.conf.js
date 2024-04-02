@@ -4,19 +4,19 @@ export const config = {
   maxInstancesPerCapability: 10,
   injectGlobals: true,
   capabilities: [
-    {
-      browserName: 'chrome',
-      'goog:chromeOptions': {
-        args: ['-headless', 'disable-gpu'],
-      },
-    },
-    // Firefox commented out as to not cause conflicts with one other test using Devtools.
     // {
-    //     browserName: 'firefox',
-    //     'moz:firefoxOptions': {
-    //         args: ['-headless'],
-    //     },
+    //   browserName: 'chrome',
+    //   'goog:chromeOptions': {
+    //     args: ['-headless', 'disable-gpu'],
+    //   },
     // },
+    // Firefox commented out as to not cause conflicts with one other test using Devtools.
+    {
+        browserName: 'firefox',
+        'moz:firefoxOptions': {
+            args: ['-headless'],
+        },
+    },
   ],
   logLevel: 'error',
   baseUrl: 'http://localhost:8080',
