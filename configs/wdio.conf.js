@@ -6,7 +6,6 @@ export const config = {
   capabilities: [
     {
       browserName: 'chrome',
-      browserVersion: 'stable',
       'goog:chromeOptions': {
         args: ['-headless', 'disable-gpu', '--ignore-certificate-errors'],
       },
