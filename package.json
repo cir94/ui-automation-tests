@@ -12,17 +12,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@puppeteer/browsers": "^2.2.0",
-    "@wdio/cli": "^8.35.1",
-    "@wdio/devtools-service": "^8.35.1",
-    "@wdio/local-runner": "^8.35.1",
-    "@wdio/mocha-framework": "^8.35.0",
+    "@wdio/cli": "^9.0.0-alpha.64",
+    "@wdio/devtools-service": "^9.0.0-alpha.64",
+    "@wdio/local-runner": "^9.0.0-alpha.64",
+    "@wdio/mocha-framework": "^9.0.0-alpha.64",
     "chai": "^5.1.0",
-    "webdriverio": "^8.35.1"
+    "webdriverio": "^9.0.0-alpha.64"
   },
   "devDependencies": {
-    "@wdio/cucumber-framework": "^8.33.1",
-    "@wdio/spec-reporter": "^8.32.4",
+    "@wdio/cucumber-framework": "^9.0.0-alpha.64",
+    "@wdio/spec-reporter": "^9.0.0-alpha.64",
     "prettier": "^3.2.5"
   }
 }

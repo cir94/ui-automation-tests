@@ -5,9 +5,9 @@
 # Discussion: https://github.com/webdriverio/webdriverio/discussions/12587
 # Bug report: https://github.com/webdriverio/webdriverio/issues/12589
 
-# Feature: Accessing and writing in overlapped element
+Feature: Accessing and writing in overlapped element
 
-#     Scenario: Scrolling to uncover overlapped element
-#     Given I open the url "http://uitestingplayground.com/overlapped"
-#     When I scroll the overlapped Name text box into view
-#     Then I should be able to write in the text box
+    Scenario: Scrolling to uncover overlapped element
+    Given I open the url "http://uitestingplayground.com/overlapped"
+    When I scroll the overlapped Name text box into view
+    Then I should be able to write in the text box
