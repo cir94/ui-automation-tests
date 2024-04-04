@@ -23,6 +23,7 @@
     "@wdio/cucumber-framework": "^8.33.1",
     "@wdio/spec-reporter": "^8.32.4",
     "eslint": "^8.57.0",
+    "eslint-plugin-wdio": "^8.24.12",
     "prettier": "^3.2.5"
   }
 }
