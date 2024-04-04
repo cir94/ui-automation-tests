@@ -4,21 +4,21 @@ export const config = {
   maxInstancesPerCapability: 10,
   injectGlobals: true,
   capabilities: [
-    // {
-    //   browserName: 'chrome',
-    //   // browserVersion: 'stable',
-    //   'goog:chromeOptions': {
-    //     args: ['-headless', 'disable-gpu'],
-    //   },
-    // },
-    // Firefox commented out as to not cause conflicts with one other test using Devtools.
     {
-      browserName: 'firefox',
-      acceptInsecureCerts: true,
-      'moz:firefoxOptions': {
-        args: ['-headless'],
+      browserName: 'chrome',
+      browserVersion: 'stable',
+      'goog:chromeOptions': {
+        args: ['-headless', 'disable-gpu', '--ignore-certificate-errors'],
       },
     },
+    // Firefox commented out as to not cause conflicts with one other test using Devtools.
+    // {
+    //   browserName: 'firefox',
+    //   acceptInsecureCerts: true,
+    //   'moz:firefoxOptions': {
+    //     args: ['-headless'],
+    //   },
+    // },
   ],
   logLevel: 'error',
   baseUrl: 'http://localhost:8080',
