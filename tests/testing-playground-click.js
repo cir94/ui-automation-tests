@@ -10,5 +10,6 @@ describe('UI Testing Playground - Click', function () {
     await expect(badButton).toBeClickable();
     await badButton.moveTo();
     await badButton.click();
+    await expect(badButton).toHaveElementClass('btn-success');
   });
 });

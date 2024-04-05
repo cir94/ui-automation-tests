@@ -6,7 +6,7 @@ describe('UI Testing Playground - Overlapped Element', function () {
   it('should scroll to fully display name  text box, then write text', async function () {
     envs.uiTestingUrl.pathname = '/overlapped';
     await browser.url(`${envs.uiTestingUrl}`);
-    await browser.emulateDevice('iPhone 13');
+    await browser.emulateDevice('iPhone 14');
     const nameInput = browser.$('#name');
     await nameInput.scrollIntoView();
     await nameInput.addValue('Test');

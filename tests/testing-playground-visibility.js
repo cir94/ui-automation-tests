@@ -6,7 +6,6 @@ describe('UI Testing Playground - Visibility', function () {
   it('should be able to click on hide button and hide all other buttons on the page', async function () {
     envs.uiTestingUrl.pathname = '/visibility';
     await browser.url(`${envs.uiTestingUrl}`);
-    await VisibilityPage.hideBtn.waitForClickable();
     await expect(VisibilityPage.hideBtn).toBeClickable();
     await VisibilityPage.hideBtn.click();
     // The code below will check for all buttons to be 'hidden', or in this case, assert they're not clickable

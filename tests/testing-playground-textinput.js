@@ -6,7 +6,6 @@ describe('UI Testing Playground - Text Input', function () {
     await browser.url(`${envs.uiTestingUrl}`);
     const textInput = browser.$('#newButtonName');
     const updateButton = browser.$('#updatingButton');
-    await updateButton.waitForClickable();
     await expect(updateButton).toBeClickable();
     await textInput.setValue('Success');
     await updateButton.click();

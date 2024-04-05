@@ -11,5 +11,6 @@ describe('UI Testing Playground - Ajax Page', function () {
     await expect(Page.button).toBeClickable();
     await Page.button.click();
     await Page.bgSuccess.waitForExist({ timeout: 20000 });
+    await expect(Page.bgSuccess).toBeDisplayed();
   });
 });

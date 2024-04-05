@@ -1,5 +1,6 @@
 import Page from '../pages/page.js';
 import { envs } from '../url-module.js';
+import { assert } from 'chai';
 
 describe('UI Testing Playground - Class Attribute', function () {
   it('should click on the specified button twice, once with selecting class and second with XPath, and give an alert each time', async function () {
@@ -13,6 +14,7 @@ describe('UI Testing Playground - Class Attribute', function () {
     browser.acceptAlert();
     await expect(buttonXPath).toBeClickable();
     await buttonXPath.click();
-    browser.acceptAlert();
+    const alertExist = await browser.isAlertOpen();
+    assert.isTrue(alertExist)
   });
 });
