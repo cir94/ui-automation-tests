@@ -23,6 +23,10 @@
         "sourceType": "module"
     },
     "rules": {
-        "wdio/no-pause": "off"
+        "wdio/no-pause": "off",
+        "no-unused-vars": ["warn"]
+    },
+    "globals": {
+        "Given": "readonly"
     }
 }
