@@ -8,6 +8,5 @@ describe('UI Testing Playground - Dynamic ID', function () {
     await dynamicButton.waitForClickable();
     await expect(dynamicButton).toBeClickable();
     await dynamicButton.click();
-    console.log('Successful click');
   });
 });

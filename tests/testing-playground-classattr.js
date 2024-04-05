@@ -10,11 +10,9 @@ describe('UI Testing Playground - Class Attribute', function () {
     await expect(Page.button).toBeClickable();
     await Page.button.waitForClickable();
     await Page.button.click();
-    await console.log('Button Clicked');
     browser.acceptAlert();
     await expect(buttonXPath).toBeClickable();
     await buttonXPath.click();
-    await console.log('XPath Clicked');
     browser.acceptAlert();
   });
 });

@@ -24,7 +24,7 @@
     },
     "rules": {
         "wdio/no-pause": "off",
-        "no-unused-vars": ["warn"]
+        "no-unused-vars": ["warn"] // Unused Vars is returning as warnings due to any Given import in Cucumber test pages returning as unused
     },
     "globals": {
         "Given": "readonly"
