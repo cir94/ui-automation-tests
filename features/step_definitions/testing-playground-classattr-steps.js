@@ -1,5 +1,7 @@
 import { Given, When, Then } from '@wdio/cucumber-framework';
 import Page from '../../pages/page.js';
+import { assert } from 'chai';
+
 
 When(
   'the button is clicked using its class name and opens an alert',
@@ -17,5 +19,7 @@ Then(
     const buttonXPath = browser.$('//button[contains(@class, "btn-primary")]');
     await expect(buttonXPath).toBeClickable();
     await buttonXPath.click();
+    const alertExist = await browser.isAlertOpen();
+    assert.isTrue(alertExist)
   }
 );

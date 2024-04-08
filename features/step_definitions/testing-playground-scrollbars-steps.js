@@ -8,4 +8,5 @@ When('I scroll the button into view', async function() {
 
 Then('it can be clicked', async function() {
     await ScrollPage.hiddenButton.click();
+    await expect(ScrollPage.hiddenButton).toHaveText("Hiding Button");
 })

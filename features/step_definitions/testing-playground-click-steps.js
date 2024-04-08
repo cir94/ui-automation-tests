@@ -9,4 +9,5 @@ Then('I should be able to click it', async function () {
   await expect(clickPage.button).toBeClickable();
   await clickPage.button.moveTo();
   await clickPage.button.click();
+  await expect(clickPage.button).toHaveElementClass('btn-success');
 });

@@ -17,4 +17,5 @@ Then('I should see a button and be able to click it', async function () {
   await LoadPage.button.waitForClickable();
   await expect(LoadPage.button).toBeClickable();
   await LoadPage.button.click();
+  await expect(LoadPage.button).toHaveText(expect.stringContaining('Button Appearing After Delay'))
 });
