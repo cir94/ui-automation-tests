@@ -9,6 +9,8 @@ describe('UI Testing Playground - Load Delay', function () {
     const button = await browser.$('.btn');
     await expect(button).toBeClickable();
     await button.click();
-    await expect(button).toHaveText(expect.stringContaining('Button Appearing After Delay'))
+    await expect(button).toHaveText(
+      expect.stringContaining('Button Appearing After Delay')
+    );
   });
 });

@@ -8,6 +8,6 @@ describe('UI Testing Playground - Scrollbars', function () {
     await expect(hiddenButton).toBeClickable();
     await hiddenButton.scrollIntoView({ block: 'center', inline: 'center' });
     await hiddenButton.click();
-    await expect(hiddenButton).toHaveText("Hiding Button");
+    await expect(hiddenButton).toHaveText('Hiding Button');
   });
 });

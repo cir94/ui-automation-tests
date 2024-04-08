@@ -2,7 +2,6 @@ import { Given, When, Then } from '@wdio/cucumber-framework';
 import Page from '../../pages/page.js';
 import { assert } from 'chai';
 
-
 When(
   'the button is clicked using its class name and opens an alert',
   async function () {
@@ -20,6 +19,6 @@ Then(
     await expect(buttonXPath).toBeClickable();
     await buttonXPath.click();
     const alertExist = await browser.isAlertOpen();
-    assert.isTrue(alertExist)
+    assert.isTrue(alertExist);
   }
 );

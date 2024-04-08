@@ -15,6 +15,6 @@ describe('UI Testing Playground - Class Attribute', function () {
     await expect(buttonXPath).toBeClickable();
     await buttonXPath.click();
     const alertExist = await browser.isAlertOpen();
-    assert.isTrue(alertExist)
+    assert.isTrue(alertExist);
   });
 });

@@ -12,6 +12,6 @@ describe('UI Testing Playground - Hidden Layers', function () {
     await greenButton.click();
     await expect(blueButton).toBeClickable();
     await blueButton.click();
-    chaiExpect(await greenButton.isClickable()).to.equal(false)
+    chaiExpect(await greenButton.isClickable()).to.equal(false);
   });
 });

@@ -7,6 +7,6 @@ describe('UI Testing Playground - Non-Breaking Space', function () {
     const xpathButton = $('//button[text()="My\u00a0Button"]');
     await expect(xpathButton).toBeClickable();
     await xpathButton.click();
-    await expect(xpathButton).toHaveText("My Button");
+    await expect(xpathButton).toHaveText('My Button');
   });
 });

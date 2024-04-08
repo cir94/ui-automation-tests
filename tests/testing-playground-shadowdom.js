@@ -16,12 +16,12 @@ describe('UI Testing Playground - Shadow Dom', function () {
     await copyButton.click();
     const fieldText = await guidField.getValue();
     console.log(await fieldText);
-    await browser.execute(async() => {
-        // console.log(await window.navigator.clipboard.readText());
-      })
-      await browser.pause(5000)
-      await expect(await window.navigator.clipboard.readText()).toHaveClipboardText(
-        expect.stringContaining(fieldText)
-      );
+    await browser.execute(async () => {
+      // console.log(await window.navigator.clipboard.readText());
+    });
+    await browser.pause(5000);
+    await expect(
+      await window.navigator.clipboard.readText()
+    ).toHaveClipboardText(expect.stringContaining(fieldText));
   });
 });
