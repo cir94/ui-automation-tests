@@ -31,7 +31,7 @@ export const config = {
     [
       'allure',
       {
-        outputDir: 'allure-results',
+        outputDir: 'wdio-allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: true,
       },

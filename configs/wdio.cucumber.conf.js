@@ -24,7 +24,17 @@ export const config = {
   waitforTimeout: 5000,
   services: ['devtools'],
   framework: 'cucumber',
-  reporters: ['spec'],
+  reporters: [
+    [
+      'allure',
+      {
+        outputDir: 'cucumber-allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+      },
+    ],
+    'spec',
+  ],
   cucumberOpts: {
     timeout: 20000,
     require: ['./features/step_definitions/*steps.js'],
