@@ -1,4 +1,4 @@
-import { config as baseConfig} from "./wdio.conf.js";
+import { config as baseConfig } from './wdio.conf.js';
 
 export const config = {
   ...baseConfig,
@@ -6,6 +6,6 @@ export const config = {
   framework: 'cucumber',
   cucumberOpts: {
     require: ['./features/step_definitions/*steps.js'],
-    timeout: 30000
-  }
-}
+    timeout: 30000,
+  },
+};
