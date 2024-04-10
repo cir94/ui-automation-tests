@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "wdio run ./configs/wdio.conf.js",
+    "test": "wdio run ./configs/wdio.mocha.conf.js",
     "test:cucumber": "wdio configs/wdio.cucumber.conf.js",
     "lint:check": "eslint . && prettier --check .",
     "lint:fix": "eslint --fix",
