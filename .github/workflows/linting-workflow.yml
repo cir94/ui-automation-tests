@@ -8,9 +8,6 @@ on:
       - 'main'
   workflow_dispatch:
 
-  env:
-    TESTING_URL: https://uitestingplayground.com
-
 jobs:
   check-test:
     runs-on: ubuntu-latest
@@ -28,6 +25,8 @@ jobs:
         run: npm install
 
       - name: Mocha Test
+        env:
+          TESTING_URL: https://uitestingplayground.com
         run: npm run test
 
       - name: Cucumber Test
