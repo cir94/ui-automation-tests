@@ -1,4 +1,4 @@
-# ui-automation-tests
+# UI Automation Tests
 
 This repo is comprised of tests that are written to test many of the functions provided by the website UI Testing Playground via automation.
 
