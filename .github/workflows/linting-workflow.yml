@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
   env:
-    TESTING_URL: 'https://uitestingplayground.com'
+    TESTING_URL: https://uitestingplayground.com
 
 jobs:
   check-test:
