@@ -29,5 +29,5 @@
   "globals": {
     "Given": "readonly"
   },
-  "ignorePatterns": ["allure-report/*"]
+  "ignorePatterns": ["allure-report/*", "./README.md"]
 }
