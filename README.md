@@ -6,7 +6,9 @@ There are two sets of tests in this repo, one set being written primarily in Moc
 
 Assertations are made primarily with WDIO `expect` statements, with Chai's `assert` also being used as another library to help leverage certain assertations in some tests within this repo that WDIO cannot fulfill.
 
-ESLint and Prettier are used as well, with ESLint ensuring that any errors in the code are brought to attention, while Prettier formats the code so it sticks to a uniform standard
+ESLint and Prettier are used as well, with ESLint ensuring that any errors in the code are brought to attention, while Prettier formats the code so it sticks to a uniform standard.
+
+Both Husky and Lint-staged are used to drive the aformentioned packages, with Husky being used to create a pre-commit git hook that runs lint-staged during a commit, which will in turn run Prettier against only said commited files. This helps to eliminate the need to check all files in the project, especially those that weren't commited with changes.
 
 Lastly, Allure-Reporter is being used to help give an overall view on the status of all tests after they're being ran.
 
@@ -41,4 +43,6 @@ All packages being used in this project are as follows:
 - chai
 - eslint
 - eslint-plugin-wdio
+- husky
+- lint-staged
 - prettier
