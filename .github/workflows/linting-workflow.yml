@@ -3,7 +3,7 @@ name: Linting Check
 run-name: Performing a lint check to ensure that code is clean when pushing
 
 on:
-  push:
+  pull-request:
     branches:
       - 'main'
   workflow_dispatch:
