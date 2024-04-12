@@ -8,14 +8,27 @@ on:
       - 'main'
   workflow_dispatch:
 
+  env:
+    TESTING_URL: 'https://uitestingplayground.com'
+
 jobs:
-  check-code:
+  check-test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install
-      - run: npm run test
-      - run: npm run test:cucumber
+
+      - name: Installing packages
+        run: npm install
+
+      - name: Mocha Test
+        run: npm run test
+
+      - name: Cucumber Test
+        run: npm run test:cucumber
