@@ -1,6 +1,6 @@
-name: Linting Check
+name: Run Tests
 
-run-name: Performing a lint check to ensure that code is clean when pushing
+run-name: Running all tests to ensure they run clear before pull
 
 on:
   pull_request:
@@ -17,4 +17,5 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run lint:check
+      - run: npm run test
+      - run: npm run test:cucumber
