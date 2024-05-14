@@ -2,6 +2,8 @@
 
 /.husky
 
-# Ignoring .prettierignore itself
+# Ignoring misc. files
 
+.dockerignore
+Dockerfile
 .prettierignore
