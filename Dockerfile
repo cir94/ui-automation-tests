@@ -1,15 +1,15 @@
 FROM node:22-alpine
 
-COPY package.json /app/
-COPY url-module.js /app/
-COPY configs /app/
-COPY tests /app/
-COPY pages /app/
+USER root
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-RUN npm install
-RUN --mount=type=secret,id=env \
-    cat /run/secrets/env
+RUN --mount=type=bind,source=package.json,target=package.json \
+    --mount=type=bind,source=package-lock.json,target=package-lock.json \
+    --mount=type=cache,target=/root/.npm \
+    --mount=type=secret,id=env \
+    npm install
 
-CMD ["npm run test"]
+COPY . .
+
+CMD "npm run test"
