@@ -6,7 +6,13 @@ export const config = {
     {
       browserName: 'chrome',
       'goog:chromeOptions': {
-        args: ['-headless', 'disable-gpu', '--ignore-certificate-errors'],
+        args: [
+          '-headless',
+          'disable-gpu',
+          '--no-sandbox',
+          '--disable-dev-shm-usage',
+          '--ignore-certificate-errors',
+        ],
       },
     },
     // Firefox commented out as to not cause conflicts with one other test using Devtools.

@@ -1,0 +1,7 @@
+name: wdio
+
+services:
+  mocha:
+    image: wdio-mocha
+    environment:
+      - TESTING_URL=${TESTING_URL}
