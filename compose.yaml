@@ -2,6 +2,12 @@ name: wdio
 
 services:
   mocha:
-    image: wdio-mocha
+    image: wdio-automation
     environment:
       - TESTING_URL=${TESTING_URL}
+
+  cucumber:
+    image: wdio-automation
+    environment:
+      - TESTING_URL=${TESTING_URL}
+    command: npm run test:cucumber
