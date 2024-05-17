@@ -1,3 +1,5 @@
+# To execute this docker compose file, use `docker compose up --build`
+
 name: wdio
 
 services:
